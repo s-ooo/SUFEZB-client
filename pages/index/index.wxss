@@ -1,0 +1,62 @@
+.item{
+  margin: 10px; 
+  border-radius: 5px;
+  background-color: white;
+}
+
+.left{
+  flex: left;
+  width: 65%; 
+  display: inline-block; 
+  margin: 20px 0 0 15px;
+}
+
+.author{
+  padding: 10px 0 10px 15px;
+}
+
+.author-avatar{
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background-color: #aaa;
+}
+
+.author-nickname{
+  margin-left: 5px;
+  font-size: 8pt;
+  color: #aaa;
+}
+
+.value{
+  font-size: 12pt;
+  color: #353535;
+}
+
+.ic-arrow{
+  padding: 0 10px;
+  height:12px;
+  width:12px;
+}
+
+.time{
+  margin-top: 10px;
+}
+
+.right{
+  width: 30%; 
+  padding-top: 20px;
+  display: inline-block; 
+  text-align: center; 
+}
+
+.award-value{
+  color: #e64340;
+  font-size: 14pt;
+}
+
+.award-label{
+  font-size: 10pt;
+  color: #888;
+}

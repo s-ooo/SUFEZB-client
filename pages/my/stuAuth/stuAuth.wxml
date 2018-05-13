@@ -1,0 +1,29 @@
+<!--pages/my/campusInfo/campusInfo.wxml-->
+<form bindsubmit="formSubmit">
+  <view>
+    <text class="title">姓名</text>
+    <input class='inputBox' name='stuName' type='text' disabled="{{disabled}}"></input>
+  </view>
+
+  <view>
+    <text class="title">学号</text>
+    <input class='inputBox' name='stuID' type='number' disabled="{{disabled}}"></input>
+  </view>
+
+  <view>
+    <text class="title">手机</text>
+    <input class='inputBox' name='phone' type='number' disabled="{{disabled}}"></input>
+  </view>
+
+  <view class='section'>
+    <text class="title">学生证</text>
+    <image class='img'  bindtap="chooseStudentIDCard" src="{{srcStudentIdCard}}"style="width: 160rpx; height: 120rpx"/>
+  </view>
+
+  <view class='section'>
+    <text class="title">校园卡</text>
+    <image class='img'  bindtap="chooseCampusCard" src="{{srcCampusCard}}" mode="aspecFill" style="width: 160rpx; height: 120rpx"/>
+  </view>
+
+  <button class="btn" type='primary' formType='submit'>提交</button>
+</form>

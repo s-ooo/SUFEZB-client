@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+
+    "pages/newTask/newTask",
+
+    "pages/my/profile/profile",
+    "pages/my/myPick/myPick",
+    "pages/my/myPublish/myPublish",
+    "pages/taskDetail/taskDetail",
+    "pages/my/stuAuth/stuAuth"
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "SUFE快递帮",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#c0392b",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "任务",
+        "iconPath": "images/tab_home.png",
+        "selectedIconPath": "images/tab_home_selected.png"
+      },
+      {
+        "pagePath": "pages/newTask/newTask",
+        "text": "发布",
+        "iconPath": "images/tab_new.png",
+        "selectedIconPath": "images/tab_new_selected.png"
+      },
+      {
+        "pagePath": "pages/my/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tab_my.png",
+        "selectedIconPath": "images/tab_my_selected.png"
+      }
+    ]
+  }
+}

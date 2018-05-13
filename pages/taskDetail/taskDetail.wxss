@@ -1,0 +1,61 @@
+page{
+  background-color: white;
+}
+
+.author{
+  padding: 10px 0 10px 15px;
+}
+
+.author-avatar {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background-color: #aaa;
+}
+
+.author-nickname {
+  margin-left: 5px;
+  font-size: 8pt;
+  color: #aaa;
+}
+
+.btn{
+  position: fixed; 
+  margin: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+}
+
+
+.title{
+  margin: 10px;
+  display: block;
+}
+
+.title-ic{
+  width: 16px;
+  height: 16px;
+}
+
+.title-text{
+  margin: 10px;
+  font-size: 10pt;
+  color: #888;
+}
+
+.value{
+  margin: 30px;
+  padding: 5px;
+  color: #353535;
+  font-size: 14pt;
+}
+
+.margin{
+  height: 120px
+}
+
+.margin2{
+  height: 30px
+}

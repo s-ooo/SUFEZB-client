@@ -1,0 +1,44 @@
+/* pages/my/profile/profile.wxss */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; 
+  background-color: white;
+  height: 120px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-color: #aaa;
+  display: block;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.ic{
+  width: 18px;
+  height: 18px;
+  float: right;
+}
+
+.bg{
+  background-color: white;
+  padding: 15px 20px;
+  margin-top: 10px;
+}
+
+.auth-label{
+  padding: 2px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  font-size: 11pt;
+  color: #e64340;
+}

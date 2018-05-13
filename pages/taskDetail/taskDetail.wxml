@@ -1,0 +1,113 @@
+<view> 
+
+  <view class='author'>
+    <image class="author-avatar" src='{{taskDetail.avatar_url}}'/>
+    <text class="author-nickname">{{taskDetail.nickname}} 发布</text>
+  </view>
+
+  <view>
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_place_start.png'> </image>
+      <text class='title-text'>领取地点</text>
+    </view>
+    <text class='value'>{{taskDetail.place_start}}</text>
+  </view>
+
+  <view>
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_place_arrive.png'> </image>
+      <text class="title-text">送达地点</text>
+    </view>
+    <text class='value'>{{taskDetail.place_arrive}}</text>
+  </view>
+
+  <view>
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_datetime.png'> </image>
+      <text class="title-text">快件领取时间</text>
+    </view>
+    <text class='value'>{{taskDetail.pkg_datetime}} 前</text>
+  </view>
+
+  <view>
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_award.png'> </image>
+      <text class="title-text">奖励</text>
+    </view>
+    <text class='value'>{{taskDetail.task_award}}</text>
+  </view>
+
+  <view>
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_note.png'> </image>
+      <text class="title-text">备注</text>
+    </view>
+    <text class='value'>{{taskDetail.task_note}}</text>
+  </view>
+
+</view>
+
+<!--For领取者：领取任务后显示取件码等信息  -->
+<view wx:if="{{taskDetail.task_status=='1' && taskDetail.author_id != userId}}">
+
+  <view>
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_recipient.png'> </image>
+      <text class="title-text">收件人</text>
+    </view>
+    <text class='value'>{{taskDetail.pkg_recipient}}</text>
+  </view>
+
+  <view >
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_recipient_contact.png'> </image>
+      <text class="title-text">收件人联系方式</text>
+    </view>
+    <text class='value'>{{taskDetail.pkg_recipient_contact}}</text>
+  </view>
+
+  <view >
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_note.png'> </image>
+      <text class="title-text">取件码</text>
+    </view>
+    <text class='value'>{{taskDetail.pkg_code}}</text>
+  </view>
+
+</view>
+
+<!--For发布者：任务被领取后显示领取人信息  -->
+<view wx:if="{{taskDetail.task_status=='1' && taskDetail.author_id == userId}}">
+
+  <view>
+    <view class='margin2'></view>
+    <text class="title-text">领取人信息</text>
+  </view>
+
+  <view class='author'>
+    <image class="author-avatar" src='{{courier.avatar_url}}'/>
+    <text class="author-nickname">{{courier.nickname}} 领取</text>
+  </view>
+
+  <view >
+    <view class="title">
+      <image class="title-ic" src='../../images/taskDetail_note.png'> </image>
+      <text class="title-text">领取者人联系电话</text>
+    </view>
+    <text class='value'>{{courier.phone}}</text>
+  </view>
+
+</view>
+
+<view class='margin' />
+
+<view class='btn'>
+  <view>
+    <button wx:if="{{taskDetail.task_status=='0' && taskDetail.author_id != userId}}" class="btn-primary" type="primary" bindtap='pickTask'>领取任务</button>
+    <button wx:elif="{{taskDetail.task_status=='1' && order.order_status == '0' && taskDetail.author_id != userId }}" class="btn-primary" type="primary" bindtap='completeTask'>已完成任务</button>
+
+    <button wx:elif="{{taskDetail.task_status=='0' && taskDetail.author_id == userId}}" class="btn-primary" type="warn" bindtap='deleteTask'>删除</button>
+    <button wx:elif="{{(order.order_status =='0'||order.order_status =='1') && taskDetail.author_id == userId}}" class="btn-primary" type="primary" bindtap='confirmTask'>确认已成功送达</button> 
+    
+  </view>
+</view>

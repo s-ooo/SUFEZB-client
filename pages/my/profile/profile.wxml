@@ -1,0 +1,33 @@
+<!--pages/profile/profile.wxml-->
+
+<view class="userinfo">
+  <view class="user" bindtap='setting'>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" />
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+</view>
+
+<view class='bg'>
+  <view bindtap='bindCampusInfo'>
+    <text>校园认证</text>
+    <text class='auth-label' style='color:{{labelTextColor}}'>{{authStatusLabel}}</text>
+    <image class="ic" src='../../../images/arrow_right.png'>arrow</image>
+  </view>
+ </view>
+
+<view class='bg'>
+  <view bindtap='myPublish'>
+    <text>我的发布</text>
+    <image class="ic" src='../../../images/arrow_right.png'>arrow</image>
+  </view>
+</view>
+
+<view class='bg'>
+  <view bindtap='myPick'>
+    <text>我的领取</text>
+    <image class="ic" src='../../../images/arrow_right.png'>arrow</image>
+  </view>
+</view>
+
+
+  

@@ -1,0 +1,63 @@
+<!--pages/newTask/newTask.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+
+  <scroll-view class='form'>
+ 
+  <view>
+    <text class='title'>领取地点</text>
+    <picker class='form-item' name="placeStart" bindchange="bindPickerChange" value="{{index}}" range="{{startPlaceArray}}">
+      <view class="picker">{{startPlaceArray[index]}}</view>
+    </picker>
+  </view>
+
+  <view>
+    <text class='title'>送达地点</text>
+    <picker class='form-item' name="placeArrive" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker">{{multiArray[1][multiIndex[1]]}}</view>
+    </picker>
+  </view>
+
+  <view>
+    <text class='title'>快件领取时间</text>
+    <view class='form-item'> 
+      <picker class='date' name = "pkgDate" mode="date" bindchange="bindDateChange"> 
+        <view class="picker">{{date}}</view>
+        <text>{{test}}</text>
+      </picker>
+      <picker class='time' name="pkgTime" mode = "time" bindchange="bindTimeChange">
+        <view class="picker">{{time}}  前</view>
+      </picker>
+    </view>
+  </view>
+
+  <view>
+    <text class='title'>奖励</text>
+    <input class='form-item' name="taskAward" value='{{formInit}}'></input>
+  </view>
+
+  <view>
+    <text class='title'>备注</text>
+    <textarea class="form-item" style="height:80px" name="taskNote" placeholder='请输入备注' value='{{formInit}}'></textarea>
+  </view>
+
+  <text class='hint'>以下信息只有领取者可见</text>
+  <view>
+    <text class='title'>收件人</text>
+    <input class='form-item' name="pkgRecipient" value='{{formInit}}'></input>
+  </view>
+
+  <view>
+    <text class='title'>联系方式</text>
+    <input class='form-item' name="pkgRecipientContact" value='{{formInit}}'></input>
+  </view>
+
+  <view>
+    <text class='title'>取件码</text>
+    <input class='form-item' type='number' name="pkgCode" value='{{formInit}}'></input>
+  </view>
+
+  </scroll-view>
+
+  <button class='btn' type='primary' formType='submit'>发布任务</button>
+  
+</form>
